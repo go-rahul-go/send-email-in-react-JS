@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
 
+import { createContext, useEffect, useState } from "react";
+import EmailForm from "./components/EmailForm";
+import Header from "./components/Header";
+import DarkMode from "./components/DarkMode"
+import "./Style.css"
+
+export const ThemeContext = createContext();
 function App() {
+  const [isDark, changeDark] = useState("light")
+  useEffect(()=>{
+    if(isDark==="light")
+      document.body.style.backgroundColor="white"
+    else
+      document.body.style.backgroundColor="#656767"
+  },[isDark])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <DarkMode theme={changeDark} />
+      <ThemeContext.Provider value={isDark}>
+        <Header />
+        <EmailForm />
+        </ThemeContext.Provider>
+
+    </>
+  )
 }
 
 export default App;

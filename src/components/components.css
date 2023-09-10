@@ -1,0 +1,139 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 225, 0);
+    padding:1% 0%;
+}
+
+header h1 {
+    font-weight: bolder;
+    text-transform: capitalize;
+    color: #590004;
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.email {
+    width: 80%;
+    height: 80vh;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2vh auto;
+    border-radius: 10px;
+  
+}
+
+
+.email div {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 70%;
+    gap: 10px;
+    /* background-color: antiquewhite; */
+}
+
+.email div input {
+    width: 90%;
+    height: 5vh;
+    margin: 0;
+}
+
+#message {
+    width: 90%;
+    height: 40vh;
+    font-size: 1.1em;
+    resize: none;
+}
+#btn{
+    width:20%;
+    height:6vh;
+    font-family:sans-serif;
+    font-weight: 700;
+    border:2px solid black;
+    border-radius: 10px;
+    transition:all linear 300ms;
+}
+#btn:hover{
+    background-color: #04c9ff;
+    color:white;
+    border:2px solid rgb(34, 5, 255);
+    cursor: pointer;
+}
+
+/* .toggle{
+    position: absolute;
+    top:2%;
+    right:10px;
+    width:50px;
+    height:30px;
+    border-radius:50px;
+    border:1px solid grey;
+    background-color: rgb(179, 179, 179);
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+} */
+/* .toggle-btn
+{
+    width:25px;
+    height:25px;
+    background-color: rgb(227, 227, 227);
+    border:2px solid rgb(99, 99, 99);
+    border-radius: 50%;
+} */
+
+#pop-up-btn{
+    width:150px;
+    height:5vh;
+    border-radius: 10px;
+    border:2px solid black;
+}
+
+#pop-up-btn:hover{
+    background-color: #18cdff;
+    color:white;
+    
+
+}
+
+@media (max-width:550px)
+{
+    header h1{
+        font-size:1.2em;
+    }
+    .email{
+        width:90%;
+    }
+    .email div{
+        width:95%;
+
+    }
+    .email div input{
+        width:100%;
+        font-size: 1.2rem;
+    }
+    #message{
+        width:100%;
+    }
+    #btn{
+        width:30%;
+    }
+    .toggle{
+        width:70px;
+        height:30px;
+    }
+    .toggle-btn{
+        width:20px;
+        height:20px;
+    }
+}
